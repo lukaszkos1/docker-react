@@ -8,7 +8,7 @@ services:
 before_install:
     - docker build -t lukaszkos1/docker-react -f Dockerfile.dev .
 
-    script:
+script:
     - docker run -e CI=true lukaszkos1/docker-react npm run test
 
 deploy:
